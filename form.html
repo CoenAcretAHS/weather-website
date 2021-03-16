@@ -21,11 +21,13 @@ fetch("https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=" + lon + "&lat=
 		
 		.then(response => response.json())
 		.then(data => {
-			  document.getElementById("name").innerHTML=data.data[0].city_name;
-			  document.getElementById("app_temp").innerHTML=data.data[0].app_temp
+			document.getElementById("name").innerHTML=data.data[0].city_name;
+			document.getElementById("app_temp").innerHTML=data.data[0].app_temp;
+			document.getElementById("temp").innerHTML=data.data[0].temp;
+			   
 });
 			
-
+alert("Weather data fetched!")
 		;}
 	</script>
 </head>
@@ -46,10 +48,16 @@ fetch("https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=" + lon + "&lat=
 	</form>
 	</div>
 	<div id="content">
-	<h4>Place name:</h4>
-	<p id="name"></p>
-	<h4>Feels like (deg C):</h4>
-		<p id="app_temp"></p>
+	<span class="inline"><h4>Place name:</h4>
+	<p id="name"></p></span>
+	<span class="inline">
+		<h4>Feels like (deg C):</h4>
+		<p id="app_temp"></p></span>
+		
+	<span class="inline">
+		<h4>Actual temperature (deg C):</h4>
+		<p id="temp"></p>
+		</span>
 	</div>
 <iframe name="hidden_form" class="hide"></iframe>
 </body>

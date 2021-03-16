@@ -33,9 +33,14 @@ nav a:hover {
   color: black;
 }
 .hide {
-	position:absolute; 
-	top:-6px; 
-	left:-6px; 
-	width:1px; 
-	height:1px;
+	display:none;
+}
+
+.content {
+	display: inline-block;
+}
+
+.inline {
+	display: inline-block;
+	padding-right: 20px;
 }
