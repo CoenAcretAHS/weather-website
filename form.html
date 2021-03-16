@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link type="text/css" rel="stylesheet" href="misc.css">
+<link type="text/javascript" href="weather.js">
+<title>Form page</title>
+
+<script>
+		function get_vars() {
+		let lat = document.getElementsByName("latitude")[0].value
+		let lon = document.getElementsByName("longitude")[0].value
+		let weatherData;
+fetch("https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=" + lon + "&lat=" + lat, {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "771be1521amshc504b5ff9fd310ap116d26jsn235e05170252",
+		"x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com"
+	}
+})
+		
+		.then(response => response.json())
+		.then(data => {
+			  document.getElementById("name").innerHTML=data.data[0].city_name;
+			  document.getElementById("app_temp").innerHTML=data.data[0].app_temp
+});
+			
+
+		;}
+	</script>
+</head>
+	
+<body>
+	<nav>
+		<a href="index.html">Home</a>
+	</nav>
+<div class="form" id="form">
+<form target="hidden_form" id="weather" onSubmit="get_vars()">
+		<label for="latitude">Input latitude:</label><br>
+		<input type="text" id="latitude" name="latitude" value="-28.8409"><br><br>
+		
+		<label for="longitude">Input longitude:</label><br>
+		<input type="text" id="longitude" name="longitude" value="153.4496"><br><br>
+		
+		<input type="submit" value="Get weather!">
+	</form>
+	</div>
+	<div id="content">
+	<h4>Place name:</h4>
+	<p id="name"></p>
+	<h4>Feels like (deg C):</h4>
+		<p id="app_temp"></p>
+	</div>
+<iframe name="hidden_form" class="hide"></iframe>
+</body>
+</html>
