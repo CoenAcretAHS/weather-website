@@ -32,9 +32,16 @@ nav a:hover {
   color: black;
 }
 .hide {
-	position:absolute; 
-	top:-1px; 
-	left:-1px; 
-	width:1px; 
-	height:1px;
+	display:none;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: darkgray;
+  color: white;
+  text-align: center;
+  height: 30px;
+  padding-top: 15px;
 }
