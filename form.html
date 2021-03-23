@@ -20,9 +20,27 @@ fetch("https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=" + lon + "&lat=
 		
 		.then(response => response.json())
 		.then(data => {
+			console.log(data)
 			document.getElementById("name").innerHTML=data.data[0].city_name;
 			document.getElementById("app_temp").innerHTML=data.data[0].app_temp;
 			document.getElementById("temp").innerHTML=data.data[0].temp;
+			document.getElementById("cloud_desc").innerHTML=data.data[0].weather.description;
+			document.getElementById("precip").innerHTML=data.data[0].precip;
+			document.getElementById("clouds").innerHTML=data.data[0].clouds;
+			document.getElementById("rh").innerHTML=data.data[0].rh;
+			document.getElementById("wind_dir_full").innerHTML=data.data[0].wind_cdir_full;
+			document.getElementById("wind_speed").innerHTML=data.data[0].wind_spd;
+			document.getElementById("wind_dir").innerHTML=data.data[0].wind_dir;
+			document.getElementById("sunset").innerHTML=data.data[0].sunset;
+			document.getElementById("sunrise").innerHTML=data.data[0].sunrise;
+			document.getElementById("timezone").innerHTML=data.data[0].timezone;
+			if (data.data[0].pod == "d") {
+				document.getElementById("pod").innerHTML="day";
+			} else if (data.data[0].pod == "n") {
+				document.getElementById("pod").innerHTML="night";
+			} else {
+				document.getElementById("pod").innerHTML="error";
+			}
 			   
 });
 			
@@ -53,6 +71,8 @@ alert("Weather data fetched!")
 	<br><br>
 	
 	<div id="content">
+		<div id="general">
+			<h3>General Weather</h3>
 	<span class="inline"><h4>Place name:</h4>
 	<p id="name"></p></span>
 	<span class="inline">
@@ -62,8 +82,66 @@ alert("Weather data fetched!")
 	<span class="inline">
 		<h4>Actual temperature (deg C):</h4>
 		<p id="temp"></p>
+			</span></div>
+		<br>
+		<div id="clouds_etc">
+			<h3>Cloud and Rainfall Data</h3>
+	<span class="inline">
+		<h4>Clouds Description</h4>
+		<p id="cloud_desc"></p>
+		</span>
+	<span class="inline">
+			<h4>Rainfall (millimetres/hour)</h4>
+			<p id="precip"></p>
+			</span>
+	<span class="inline">
+			<h4>Cloud Coverage (%)</h4>
+			<p id="clouds"></p>
+			</span>
+			
+	<span class="inline">
+			<h4>Humidity (%)</h4>
+			<p id="rh"></p>
+			</span>
+		</div><br><div id="wind_data">
+		<h3>Wind Data</h3>
+		<span class="inline">
+			<h4>Wind Direction</h4>
+			<p id="wind_dir_full"></p>
+		</span>
+		
+		<span class="inline">
+			<h4>Wind Speed (m/s)</h4>
+			<p id="wind_speed"></p>
+		</span>
+		
+		<span class="inline">
+			<h4>Wind Direction (deg)</h4>
+			<p id="wind_dir"></p>
+		</span></div><br><div id="other">
+		<h3>Other Statistics</h3>
+		
+		<span class="inline">
+			<h4>Sunset Time</h4>
+			<p id="sunset"></p>
+		</span>
+		
+		<span class="inline">
+			<h4>Sunrise Time</h4>
+			<p id="sunrise"></p>
+		</span>
+		
+		<span class="inline">
+			<h4>Timezone</h4>
+			<p id="timezone"></p>
+		</span>
+		
+		<span class="inline">
+			<h4>Part of the Day</h4>
+			<p id="pod"></p>
 		</span>
 		</div>
+	</div>
 <iframe name="hidden_form" class="hide"></iframe>
 	
 		<div class="footer">
