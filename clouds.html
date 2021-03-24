@@ -3,9 +3,35 @@
 <head>
 <meta charset="utf-8">
 <title>Clouds</title>
-<link rel="stylesheet" href="misc.css">
+<link rel="stylesheet" href="clouds.css">
 </head>
+<script>
+	var slideIndex = 1;
+showSlides(slideIndex);
 
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}</script>
 <body>
 	<nav>
 		<a href="index.html">Home</a>
@@ -18,7 +44,7 @@
 	</div>
 	<div id="main">
 	<h2>Clouds</h2>
-	<h1>Types of Clouds</h1>
+	<h4>Types of Clouds</h4>
 	<ul>
 		<li>Altocumulus</li>
 		<li>Altostratus</li>
@@ -31,7 +57,71 @@
 		<li>Stratocumulus</li>
 		<li>Stratus</li>
 	</ul>
-		
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 10</div>
+    <img src="altocumulus.jfif" style="width:100%">
+    <div class="text">Altocumulus</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 10</div>
+    <img src="altostratus.jfif" style="width:100%">
+    <div class="text">Altostratus</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 10</div>
+    <img src="Cirrocumulus.jpg" style="width:100%">
+    <div class="text">Cirrocumulus</div>
+  </div>
+	
+	<div class="mySlides fade">
+    <div class="numbertext">4 / 10</div>
+    <img src="Cirrostratus.jpg" style="width:100%">
+    <div class="text">Cirrostratus</div>
+	</div>
+	
+	<div class="mySlides fade">
+    <div class="numbertext">5 / 10</div>
+    <img src="cirrus.jpg" style="width:100%">
+    <div class="text">Cirrus</div>
+	</div>
+	
+	<div class="mySlides fade">
+    <div class="numbertext">6 / 10</div>
+    <img src="Cumulonimbus.jpg" style="width:100%">
+    <div class="text">Cumulonimbus</div>
+	</div>
+<div class="mySlides fade">
+    <div class="numbertext">7 / 10</div>
+    <img src="Cumulus.jfif" style="width:100%">
+    <div class="text">Cumulus</div>
+	</div>
+<div class="mySlides fade">
+    <div class="numbertext">8 / 10</div>
+    <img src="Nimbostratus.jpg" style="width:100%">
+    <div class="text">Nimbostratus</div>
+	</div>
+<div class="mySlides fade">
+    <div class="numbertext">9 / 10</div>
+    <img src="Stratocumulus.jpg" style="width:100%">
+    <div class="text">Stratocumulus</div>
+	</div>
+<div class="mySlides fade">
+    <div class="numbertext">10 / 10</div>
+    <img src="Stratus.jpg" style="width:100%">
+    <div class="text">Stratus</div>
+	</div>
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	
+</div>
+<br>
 	</div>
 	</body>
 </html>
