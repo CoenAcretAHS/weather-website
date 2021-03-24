@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<link type="text/css" rel="stylesheet" href="misc.css">
-<title>Weather Data</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Coen Acret">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex" />
+	<link type="text/css" rel="stylesheet" href="misc.css">
+	<title>Weather Data</title>
 
 <script>
 	function get_vars() {
@@ -53,10 +56,10 @@ alert("Weather data fetched!")
 		<a href="index.html">Home</a>
 		<a href="clouds.html">Clouds</a>
 	</nav>
-<div class="form" id="form">
-	<div id="page-header">
-	<h2 class="heading" style="display: inline-block">Weather Form</h2>
-		<p class="hide">The co-ordinates for Ballina are auto filled for convenience.</p></div>
+<div class="form" id="form" stle="display:inline-block;">
+	<div id="parent">
+	<h2 id="page-header">Weather Form</h2>
+		<p class="hover" id="child">The co-ordinates for Ballina are auto filled for convenience.</p></div>
 	
 <form target="hidden_form" id="weather" onSubmit="get_vars()">
 		<label for="latitude">Input latitude:</label><br>
