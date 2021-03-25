@@ -142,14 +142,15 @@ nav a:hover {
 }
 .footer {
   position: fixed;
-  left: 0;
+  right: 0;
   bottom: 0;
-  width: 100%;
+  width: 25%;
   background-color: darkgray;
   color: white;
   text-align: center;
-  height: 30px;
-  padding-top: 15px;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .inline-pic {
 	display: inline-block;

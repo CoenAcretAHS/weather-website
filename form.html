@@ -34,8 +34,8 @@ fetch("https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=" + lon + "&lat=
 			document.getElementById("wind_dir_full").innerHTML=data.data[0].wind_cdir_full;
 			document.getElementById("wind_speed").innerHTML=data.data[0].wind_spd;
 			document.getElementById("wind_dir").innerHTML=data.data[0].wind_dir;
-			document.getElementById("sunset").innerHTML=data.data[0].sunset;
-			document.getElementById("sunrise").innerHTML=data.data[0].sunrise;
+			document.getElementById("sunset").innerHTML=data.data[0].sunrise;
+			document.getElementById("sunrise").innerHTML=data.data[0].sunset;
 			document.getElementById("timezone").innerHTML=data.data[0].timezone;
 			if (data.data[0].pod == "d") {
 				document.getElementById("pod").innerHTML="day";
