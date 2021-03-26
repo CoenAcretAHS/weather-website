@@ -5,7 +5,7 @@
 	<meta name="author" content="Coen Acret">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="robots" content="noindex" />
-	<link type="text/css" rel="stylesheet" href="misc.css">
+	<link type="text/css" rel="stylesheet" href="CSS/misc.css">
 	<title>Weather Data</title>
 
 <script>
@@ -52,23 +52,27 @@ alert("Weather data fetched!")
 </head>
 	
 <body>
+	<div class="main">
 	<nav>
 		<a href="index.html">Home</a>
 		<a href="clouds.html">Clouds</a>
+		<a href="iframe.html">Guides</a>
 	</nav>
 <div class="form" id="form" stle="display:inline-block;">
 	<div id="parent">
 	<h2 id="page-header">Weather Form</h2>
+		
+		<marquee class="marquee_warnings" bgcolor="#B39A1B" style=""><b>SEVERE WEATHER WARNINGS: Flooding, Heavy Rain and Dangerous Surf Conditions Mid North Coast | Evacuation orders in place suburbs of Sydney | A nice day found to host AHS cross country</b></marquee>
 		<p class="hover" id="child">The co-ordinates for Ballina are auto filled for convenience.</p></div>
 	
 <form target="hidden_form" id="weather" onSubmit="get_vars()">
 		<label for="latitude">Input latitude:</label><br>
-		<input type="text" id="latitude" name="latitude" value="-28.8409"><br><br>
+		<input type="text" id="latitude" name="latitude" value="-28.8409" style="color:black;font-weight: bolder"><br><br>
 		
 		<label for="longitude">Input longitude:</label><br>
-		<input type="text" id="longitude" name="longitude" value="153.4496"><br><br>
+		<input type="text" id="longitude" name="longitude" value="153.4496" style="color:black;font-weight: bolder"><br><br>
 		
-		<input type="submit" value="Get weather!">
+		<input type="submit" value="Get weather!" style="color:black;font-weight: bolder">
 	</form>
 	</div>
 	<br><br>
@@ -150,6 +154,6 @@ alert("Weather data fetched!")
 		<div class="footer">
 		Coen Acret | 2021 | 
 		<a href="bibliography.html">Bibliography</a>
-	</div>
+	</div></div>
 </body>
 </html>
