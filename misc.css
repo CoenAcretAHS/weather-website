@@ -1,9 +1,8 @@
-@font-face {
-	font-family: 'Montserrat';
-	src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
 * {
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
+	color:white;
 }
 
 body {
@@ -72,4 +71,8 @@ nav a:hover {
   height: auto;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.marquee_warnings {
+	color:grey;
+	
 }

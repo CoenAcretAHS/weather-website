@@ -1,4 +1,10 @@
-* {box-sizing:border-box}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+* {
+	font-family: 'Montserrat', sans-serif;
+	color:white;
+	box-sizing:border-box
+}
 
 .slideshow-container {
   max-width: 1000px;
@@ -76,22 +82,10 @@
   animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
 
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
-}
-
-@font-face {
-	font-family: Montserrat;
-	src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
-}
-* {
-	font-family: Montserrat;
 }
 
 body {
