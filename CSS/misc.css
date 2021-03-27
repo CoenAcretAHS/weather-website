@@ -78,3 +78,6 @@ nav a:hover {
 	top: 50
 	
 }
+#page-header {
+		display: inline-block;
+}
