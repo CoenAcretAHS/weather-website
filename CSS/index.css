@@ -43,3 +43,6 @@ nav a:hover {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+#page-header {
+  display: inline-block;
+}
