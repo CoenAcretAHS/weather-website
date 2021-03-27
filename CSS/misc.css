@@ -81,3 +81,6 @@ nav a:hover {
 #page-header {
 		display: inline-block;
 }
+#child {
+	dispaly: inline-block;
+}
